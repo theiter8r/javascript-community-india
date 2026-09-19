@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/*
+  Design tokens lifted from the Figma file "Javascript Community India"
+  (node 334:2841 — WEBSITE VARIATION 2).
+
+  The Figma canvas is 1728px wide, which is exactly 1.2x the 1440px design
+  grid the layout was drawn on. Every measurement in this codebase is the
+  Figma value divided by 1.2, so `px-20` here is `px-[96px]` there.
+*/
+@theme {
+  /* Surfaces */
+  --color-ink: #050505;
+  --color-panel: #1d1c20;
+  --color-canvas: #29292b;
+  --color-canvas-line: #3f3f3f;
+  --color-hairline: rgba(255, 255, 255, 0.08);
+
+  /* Brand */
+  --color-brand: #ffd400;
+  --color-brand-deep: #b89900;
+
+  /* Text */
+  --color-muted: #aaaaaa;
+  --color-subtle: #a9a9a9;
+  --color-wordmark: #e6e6e6;
+
+  /* Type */
+  --font-display: var(--font-neutraface), "Neutraface Text", "Poppins",
+    ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-ui: var(--font-roboto), "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-wordmark: var(--font-bebas), "Bebas Neue", ui-sans-serif, sans-serif;
+
+  /* The page sits on one long vertical wash that lifts from near-black at the
+     hero to a desaturated plum behind the footer. Stops sampled off the
+     full-height Figma render. */
+  --page-wash: linear-gradient(
+    180deg,
+    #050505 0%,
+    #050505 20%,
+    #09090a 34%,
+    #0f0f11 51%,
+    #232128 76%,
+    #312e37 92%,
+    #3b3742 100%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Left on the default `scroll` attachment on purpose: the wash has to ramp
+     across the whole document, not restart inside every viewport. It is also
+     pinned rather than tiled, with the final stop as the backing colour, so a
+     viewport taller than the document holds that colour instead of repeating
+     the ramp. */
+  background-color: #3b3742;
+  background-image: var(--page-wash);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  Section headings are painted with a top-to-bottom white ramp that fades to
+  43% near the baseline — the reason they read as "lit from above".
+*/
+@utility text-ramp {
+  background-image: linear-gradient(
+    170deg,
+    rgb(255, 255, 255) 65%,
+    rgba(255, 255, 255, 0.43) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0.78px 0px rgba(0, 0, 0, 0.07);
+}
+
+/* Left-to-right variant used for the team member name + role. */
+@utility text-ramp-x {
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* The chrome "JS" in the large logo tile. */
+@utility text-chrome {
+  background-image: linear-gradient(
+    180deg,
+    #4a4d55 0%,
+    #9da3ae 50%,
+    #4a4d55 100%
+  );
+  background-clip: text;
+  color: transparent;
+}

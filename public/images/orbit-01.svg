@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="158.796" height="159.973" viewBox="0 0 158.796 159.973" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="6408d31fe77edc25e03ef3ee_orbit-01.svg" clip-path="url(#clip0_0_58)">
+<path id="Vector" opacity="0.3" d="M79.4147 159.042C122.707 159.042 157.803 123.648 157.803 79.9864C157.803 36.3251 122.707 0.930503 79.4147 0.930503C36.1222 0.930503 1.02666 36.3251 1.02666 79.9864C1.02666 123.648 36.1222 159.042 79.4147 159.042Z" stroke="url(#paint0_linear_0_58)" stroke-width="1.01256" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_58" x1="79.3888" y1="0.613639" x2="79.3888" y2="159.329" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.492" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_0_58">
+<rect width="158.796" height="159.973" fill="white"/>
+</clipPath>
+</defs>
+</svg>
